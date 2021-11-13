@@ -5,6 +5,7 @@ A Flutter package for create columns and rows with separators
 All the snippets are from the [example project](https://github.com/CodeFoxLk/easy_separator).
 
 **Easy Separated Column**
+![Separated Column](https://user-images.githubusercontent.com/85751396/141652019-d8e2f36b-2080-4c4b-90fd-4f975eedcb29.png)
 
 
 
@@ -25,6 +26,8 @@ All the snippets are from the [example project](https://github.com/CodeFoxLk/eas
           )
 
 **Easy Separated Row**
+![Separated Row](https://user-images.githubusercontent.com/85751396/141652048-839271fd-4006-4605-bc09-a46ca0b273db.png)
+
 
     EasySeparatedRow(
                   separatorBuilder: (BuildContext context, int index) {
