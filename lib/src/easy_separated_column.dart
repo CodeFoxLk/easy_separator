@@ -12,7 +12,7 @@ class EasySeparatedColumn extends StatelessWidget {
       required this.children,
       required this.separatorBuilder,
       this.separatorForTop = false,
-      this.seperatorForBottom = false})
+      this.separatorForBottom = false})
       : super(key: key);
 
   final MainAxisAlignment mainAxisAlignment;
@@ -24,26 +24,26 @@ class EasySeparatedColumn extends StatelessWidget {
   final List<Widget> children;
   final IndexedWidgetBuilder separatorBuilder;
   final bool separatorForTop;
-  final bool seperatorForBottom;
+  final bool separatorForBottom;
 
   @override
   Widget build(BuildContext context) {
-    final childrenWithSeperators = <Widget>[];
+    final childrenWithSeparators = <Widget>[];
 
     if (separatorForTop) {
-      childrenWithSeperators.add((separatorBuilder(context, 0)));
+      childrenWithSeparators.add((separatorBuilder(context, 0)));
     }
 
     for (var i = 0; i < children.length; i++) {
-      childrenWithSeperators.add(children[i]);
+      childrenWithSeparators.add(children[i]);
 
       if (children.length - 1 != i) {
-        childrenWithSeperators.add(separatorBuilder(context, i));
+        childrenWithSeparators.add(separatorBuilder(context, i));
       }
     }
 
-    if (seperatorForBottom) {
-      childrenWithSeperators.add((separatorBuilder(context, children.length)));
+    if (separatorForBottom) {
+      childrenWithSeparators.add((separatorBuilder(context, children.length)));
     }
 
     return Column(
@@ -53,7 +53,7 @@ class EasySeparatedColumn extends StatelessWidget {
       textDirection: textDirection,
       verticalDirection: verticalDirection,
       textBaseline: textBaseline,
-      children: childrenWithSeperators,
+      children: childrenWithSeparators,
     );
   }
 }
