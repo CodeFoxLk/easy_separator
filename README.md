@@ -1,4 +1,4 @@
-# Easy Separator Example
+# Easy Separator
 
 A Flutter package for create columns and rows with separators
 
