@@ -11,8 +11,8 @@ class EasySeparatedRow extends StatelessWidget {
       this.textBaseline,
       required this.children,
       required this.separatorBuilder,
-      this.separatorForTop = false,
-      this.separatorForBottom = false})
+      this.separatorForLeft = false,
+      this.separatorForRight = false})
       : super(key: key);
 
   final MainAxisAlignment mainAxisAlignment;
@@ -23,14 +23,14 @@ class EasySeparatedRow extends StatelessWidget {
   final TextBaseline? textBaseline;
   final List<Widget> children;
   final IndexedWidgetBuilder separatorBuilder;
-  final bool separatorForTop;
-  final bool separatorForBottom;
+  final bool separatorForLeft;
+  final bool separatorForRight;
 
   @override
   Widget build(BuildContext context) {
     final childrenWithSeparators = <Widget>[];
 
-    if (separatorForTop) {
+    if (separatorForLeft) {
       childrenWithSeparators.add((separatorBuilder(context, 0)));
     }
 
@@ -42,7 +42,7 @@ class EasySeparatedRow extends StatelessWidget {
       }
     }
 
-    if (separatorForBottom) {
+    if (separatorForRight) {
       childrenWithSeparators.add((separatorBuilder(context, children.length)));
     }
 
