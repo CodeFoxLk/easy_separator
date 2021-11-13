@@ -1,16 +1,44 @@
-# easy_separator_example
+# Easy Separator Example
 
-A new Flutter project.
+A Flutter package for create columns and rows with separators
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+**Easy Separated Column**
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    EasySeparatedColumn(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            separatorBuilder: (BuildContext context, int index) {
+              return const Text('<Easy Separator>',);
+            },
+            children: [
+              Container(height: 20, color: Colors.purple),
+              Container(height: 20, color: Colors.lightBlue),
+              Container(height: 20, color: Colors.green),
+              Container(height: 20, color: Colors.yellow),
+              Container(height: 20, color: Colors.orange),
+              Container(height: 20, color: Colors.red),
+            ],
+          )
+
+**Easy Separated Row**
+
+    EasySeparatedRow(
+                  separatorBuilder: (BuildContext context, int index) {
+                    return const RotatedBox(
+                        quarterTurns: 3,
+                        child: Text(
+                          '<Easy Separator>',
+                        ));
+                  },
+                  children: [
+                    Container(width: 20, color: Colors.purple),
+                    Container(width: 20, color: Colors.lightBlue),
+                    Container(width: 20, color: Colors.green),
+                    Container(width: 20, color: Colors.yellow),
+                    Container(width: 20, color: Colors.orange),
+                    Container(width: 20, color: Colors.red),
+                  ],
+                )
